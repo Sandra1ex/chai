@@ -12,7 +12,7 @@ function adminPage({ title, user, comments }) {
               <span className="singer">{}</span>
               <span className="song-title">{}</span>
               <ul className="entry-links">
-                <li className="entry-link" ><a href={`/entries/del/${entry.id}`}>delete</a></li>
+                <li className="entry-link" ><a href={}>delete</a></li>
               </ul>
             </li>
           ))}
