@@ -1,7 +1,7 @@
 const areaRouter = require('express').Router();
 const db = require('../../db/models');
-const adminPage = require('../../view/adminPage');
-const userPage = require('../../view/userPage')
+const adminPage = require('../../view/AdminPage');
+const userPage = require('../../view/UserPage')
 
 areaRouter.get('/', async (req, res) => {
     const {user} = res.locals;
