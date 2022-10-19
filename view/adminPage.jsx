@@ -9,10 +9,9 @@ function adminPage({ title, user, comments }) {
         <ul className="teas">
           {entries.map((entry) => (
             <li className="teas" key={}>
-              <span className="singer">{}</span>
-              <span className="song-title">{}</span>
-              <ul className="entry-links">
-                <li className="entry-link" ><a href={}>delete</a></li>
+              <span className=" tea-name">{}</span>
+              <ul className="del">
+                <li className="del" ><a href={}>delete</a></li>
               </ul>
             </li>
           ))}
