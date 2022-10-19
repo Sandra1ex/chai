@@ -7,6 +7,7 @@ const configApp = require('./config/serverConfig');
 const indexRouter = require('./router/render/indexRouter');
 const teaRouter = require('./router/render/teaRouter');
 const loginRouter = require('./router/render/loginRouter');
+const logRouter = require('./router/api/logRouter');
 const registrationRouter = require('./router/render/registrationRouter');
 const registRouter = require('./router/api/registRouter');
 const adminRouter = require('./router/render/adminPage');
@@ -20,6 +21,7 @@ configApp(app);
 app.use('/', indexRouter);
 app.use('/tea', teaRouter);
 app.use('/login', loginRouter);
+app.use('/api', logRouter);
 app.use('/registration', registrationRouter);
 app.use('/api', registRouter);
 app.use('/admin', adminRouter)
