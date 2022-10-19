@@ -1,7 +1,7 @@
 const teaRouter = require('express').Router();
-const TeaPage = require('../view/Main');
+const TeaPage = require('../../view/Main');
 
-const db = require('../db/models');
+const db = require('../../db/models');
 
 teaRouter.get('/', async (req, res) => {
   try {
