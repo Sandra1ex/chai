@@ -5,20 +5,12 @@ const db = require('../../db/models');
 
 teaRouter.get('/', async (req, res) => {
   try {
-    const teas = await db.Comment.findAll({
-      include: [{
-        association: db.Comment.User,
-        attributes: ['login'],
-      },
-      {
-        association: db.Comment.Tea,
-        attributes: ['name'],
-      },
-      ],
-      attributes: ['title'],
+    const { user } = res.locals;
+    const teas = await db.Tea.findAll({
+      attributes: ['name', 'picture', 'title'],
       raw: true,
     });
-    res.renderComponent(TeaPage, { teas });
+    res.renderComponent(TeaPage, { user, teas });
   } catch ({ message }) {
     res.send({ message });
   }
