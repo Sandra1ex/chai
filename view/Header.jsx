@@ -4,7 +4,7 @@ module.exports = function Header({ user }) {
   return (
     (!user ? (
       <div className="header">
-        <span className="logo" id="logo">World of Tee</span>
+        <span className="logo" id="logo">World of Tea</span>
         <a href="/" className="headerlink">На главную</a>
         <a href="/login" className="headerlink">Войти</a>
         <a href="/registration" className="headerlink">Зарегистрироваться</a>
