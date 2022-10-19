@@ -10,6 +10,7 @@ const loginRouter = require('./router/render/loginRouter');
 const registrationRouter = require('./router/render/registrationRouter');
 const registRouter = require('./router/api/registRouter');
 const adminRouter = require('./router/render/adminPage');
+const userRouter = require('./router/render/userPage');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,7 @@ app.use('/tea', teaRouter);
 app.use('/login', loginRouter);
 app.use('/registration', registrationRouter);
 app.use('/api', registRouter);
-app.use('/profile', adminRouter)
+app.use('/admin', adminRouter)
+app.use('/user',userRouter)
 
 app.listen(PORT, () => console.log(`Сервер запущен, порт: ${PORT}`));

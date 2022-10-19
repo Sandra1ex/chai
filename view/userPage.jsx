@@ -9,8 +9,8 @@ function userPage({ title, user, comments }) {
       <main role="main">
         <ul className="coments">
           {comments.map((comment) => (
-            <li className="comment" key={}>
-              <span className="comment-title">{}</span>
+            <li className="comment" key={comment.id}>
+              <span className="comment-title">{comment.title}</span>
             </li>
           ))}
         </ul>
