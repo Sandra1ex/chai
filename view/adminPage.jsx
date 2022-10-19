@@ -9,11 +9,10 @@ function adminPage({ title, user, teas }) {
       <main role="main">
         <ul className="teas">
           {teas.map((tea) => (
-            <li className="teas" key={}>
-              <span className=" tea-name">{}</span>
-              <ul className="del">
-                <li className="del" ><a href={}>delete</a></li>
-              </ul>
+            <li className="teas" key={tea.id}>
+              <span className=" tea-name">{tea.name}</span>
+              {' '}
+              <a>delete</a>
             </li>
           ))}
         </ul>
