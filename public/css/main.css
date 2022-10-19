@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+.headerlink {
+    margin-right: 20px;
+}
+.loginblock {
+    text-align: center;
+    margin-top: 50px;
+    max-width: 300px;
+}
+.loginTable {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.btnlogin {
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.registTable {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.registblock {
+    text-align: center;
+    margin-top: 50px;
+    max-width: 300px;
+}
+
+#btnAdd {
+    margin-left: auto;
+} 
+
+.cardblock {
+    max-width: 300px;
+}
+
+
