@@ -24,7 +24,7 @@ app.use('/login', loginRouter);
 app.use('/api', logRouter);
 app.use('/registration', registrationRouter);
 app.use('/api', registRouter);
-app.use('/admin', adminRouter)
-app.use('/user',userRouter)
+app.use('/admin', adminRouter);
+app.use('/user', userRouter);
 
 app.listen(PORT, () => console.log(`Сервер запущен, порт: ${PORT}`));
