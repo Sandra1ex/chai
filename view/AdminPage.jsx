@@ -1,6 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 const Header = require('./Header');
+const AdminCard = require('./AdminCard');
 
 function adminPage({ title, user, teas }) {
   return (
@@ -9,14 +10,9 @@ function adminPage({ title, user, teas }) {
       <script defer src="/js/addTea.js" />
       <main role="main">
         <div className='container'>
-          <ul className="list-group">
+          <ul className="list-group" id='teas'>
             {teas.map((tea) => (
-              <li className="list-group-item" key={tea.id}>
-                <a className=" tea-name" href={`/tea/${tea.id}`}>{tea.name}</a>
-                {' '}
-                <br />
-                <button className='btn btn-primary'>Delete</button>
-              </li>
+              <AdminCard key={tea.id} tea={tea}/>
             ))}
           </ul>
         </div>
@@ -24,8 +20,8 @@ function adminPage({ title, user, teas }) {
           <h1>Добавить чай</h1>
           <form method="POST" action="/personalArea" className="add">
             <div className="mb-3 loginTable">
-              <input type="text" placeholder="Название" />
-              <input type="test" placeholder="Описание" />
+              <input type="text" name='name' placeholder="Название" />
+              <input type="test" name='title' placeholder="Описание" />
               <input type="text" name='picture' placeholder="Изображение"/>
               <button type="submit">Отправить</button>
             </div>

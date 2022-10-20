@@ -1,5 +1,6 @@
 const addTeaRouter = require('express').Router();
 const db = require('../../db/models');
+const AdminCard = require('../../view/AdminCard');
 
 addTeaRouter.post('/', async (req, res) => {
 
@@ -11,7 +12,7 @@ addTeaRouter.post('/', async (req, res) => {
             picture: tea.picture
         })
         await newTea.save()
-        res.redirect('/personalArea')
+        res.renderComponent(AdminCard, {tea:newTea}, {doctype: false})
     } catch ({ message }) {
         console.log(message);
     }
