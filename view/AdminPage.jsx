@@ -6,11 +6,12 @@ function adminPage({ title, user, teas }) {
   return (
     <Layout title={title}>
       <Header user={user} />
+      <script defer src="/js/addTea.js" />
       <main role="main">
         <div className='comments'>
           <ul className="teas">
             {teas.map((tea) => (
-              <li className="teas" key={tea.id}>
+              <li className="tea" key={tea.id}>
                 <span className=" tea-name">{tea.name}</span>
                 {' '}
                 <a>delete</a>
@@ -20,7 +21,7 @@ function adminPage({ title, user, teas }) {
         </div>
         <div className='form'>
           <h1>Добавить чай</h1>
-          <form action="/personalArea" method='POST'>
+          <form action="/personalArea" method='POST' className='add'>
             <label htmlFor="name">Название</label>
             <input type="text" name="name" />
             <br />
@@ -28,7 +29,7 @@ function adminPage({ title, user, teas }) {
             <input type="text" name="title" />
             <br />
             <label htmlFor="img">Изображение</label>
-            <input type="text" name='img' />
+            <input type="text" name='picture' />
             <br />
             <button type="sumbit">Добавить</button>
           </form>

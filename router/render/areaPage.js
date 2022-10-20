@@ -17,6 +17,7 @@ areaRouter.get('/', async (req, res) => {
     }else{
         try {
             const comments = await db.Comment.findAll({
+                include: db.Comment.Tea,
                 where: {userId: user.id },
                 order:[['createdAt', 'DESC']],
                 ofset: 0,

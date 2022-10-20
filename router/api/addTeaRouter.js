@@ -8,7 +8,7 @@ addTeaRouter.post('/', async (req, res) => {
         const newTea = await db.Tea.create({
             name: tea.name,
             title: tea.title,
-            picture: tea.img
+            picture: tea.picture
         })
         await newTea.save()
         res.redirect('/personalArea')
