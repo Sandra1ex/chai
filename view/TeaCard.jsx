@@ -3,7 +3,7 @@ const React = require('react');
 function TeaCard({ tea }) {
   return (
 
-    <article className="card js-tea" data-id={tea.id}>
+    <article className="card js-tea">
       <h4 className="card__title">
         <a className="cardLink" href={`/tea/${tea.id}`} data-id={`${tea.id}`}>
           {tea.name || 'Noname'}

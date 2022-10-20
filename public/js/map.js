@@ -18,13 +18,17 @@ async function createMark() {
     data.teas.forEach((el) => {
       const placemark = new ymaps.Placemark([Number(el.coordinateX), Number(el.coordinateY)], {
         balloonContent: `
-			    <div class="balloon">
-				      <div class="balloon__contacts cardLink">
-					      <a href=/tea/${el.id}>${el.name}</a>
-                <br />
-                <img class="card_picture" src=${el.picture} alt=${el.name} >
-				      </div>
-			    </div>
+          <article class="card js-tea">
+            <h4 class="card__title">
+              <a class="cardLink" href=/tea/${el.id} >
+              ${el.name}
+              </a>
+            </h4>
+            <img class="card_picture markPic" src=${el.picture} alt=${el.name} />
+            <p class="wrapGaming">${el.title} </p>
+          </article>
+
+			   
 		`,
       }, {
         iconLayout: 'default#image',
