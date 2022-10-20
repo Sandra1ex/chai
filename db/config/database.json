@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "dmt",
-    "password": "980716",
-    "database": "try",
+    "username": "postgres",
+    "password": "postgre",
+    "database": "tea-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

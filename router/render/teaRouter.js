@@ -7,7 +7,7 @@ teaRouter.get('/', async (req, res) => {
   try {
     const { user } = res.locals;
     const teas = await db.Tea.findAll({
-      attributes: ['name', 'picture', 'title'],
+      attributes: ['name', 'id', 'picture', 'title'],
       raw: true,
     });
     res.renderComponent(TeaPage, { user, teas });

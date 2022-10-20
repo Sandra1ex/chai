@@ -5,7 +5,7 @@ function TeaCard({ tea }) {
 
     <article className="card js-tea" data-id={tea.id}>
       <h4 className="card__title">
-        <a href={`/tea/${tea.id}`}>
+        <a className="cardLink" href={`/tea/${tea.id}`} data-id={`${tea.id}`}>
           {tea.name || 'Noname'}
         </a>
       </h4>

@@ -13,6 +13,7 @@ const registRouter = require('./router/api/registRouter');
 const areaRouter = require('./router/render/areaPage');
 const addTeaRouter = require('./router/api/addTeaRouter');
 const delTeasRouter = require('./router/api/delTeaRouter');
+const chaiInfoRouter = require('./router/render/chaiInfoRouter');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,5 +29,6 @@ app.use('/api', registRouter);
 app.use('/personalArea', areaRouter);
 app.use('/personalArea', addTeaRouter);
 app.use('/tea', delTeasRouter);
+app.use('/tea', chaiInfoRouter);
 
 app.listen(PORT, () => console.log(`Сервер запущен, порт: ${PORT}`));
