@@ -9,7 +9,9 @@ addTeaRouter.post('/', async (req, res) => {
         const newTea = await db.Tea.create({
             name: tea.name,
             title: tea.title,
-            picture: tea.picture
+            picture: tea.picture,
+            coordinateX: tea.coordinateX,
+            coordinateY: tea.coordinateY
         })
         await newTea.save()
         res.renderComponent(AdminCard, {tea:newTea}, {doctype: false})
