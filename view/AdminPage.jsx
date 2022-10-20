@@ -24,6 +24,8 @@ function adminPage({ title, user, teas }) {
               <input type="text" name='name' placeholder="Название" />
               <input type="test" name='title' placeholder="Описание" />
               <input type="text" name='picture' placeholder="Изображение"/>
+              <input type="text" name='coordinateX' placeholder="Координата Х"/>
+              <input type="text" name='coordinateY' placeholder="Координата Y"/>
               <button type="submit">Отправить</button>
             </div>
           </form>

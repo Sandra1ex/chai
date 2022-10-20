@@ -3,7 +3,7 @@ const buttonAddTea = document.querySelector('.add');
 buttonAddTea.addEventListener('submit', async (event) => {
     event.preventDefault();
     const {
-        method, action, name, title, picture
+        method, action, name, title, picture, coordinateX, coordinateY
     } = event.target;
     const response = await fetch(action, {
         method,
@@ -14,6 +14,8 @@ buttonAddTea.addEventListener('submit', async (event) => {
             name: name.value,
             title: title.value,
             picture: picture.value,
+            coordinateX: coordinateX.value,
+            coordinateY: coordinateY.value
         }),
     });
     const teaHtml = await response.text();
