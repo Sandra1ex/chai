@@ -12,27 +12,25 @@ function adminPage({ title, user, teas }) {
           <ul className="list-group">
             {teas.map((tea) => (
               <li className="list-group-item" key={tea.id}>
-                <span className=" tea-name">{tea.name}</span>
+                <a className=" tea-name" href={`/tea/${tea.id}`}>{tea.name}</a>
                 {' '}
-                <a href={`/tea/del/${tea.id}`}>delete</a>
+                <br />
+                <button className='btn btn-primary'>Delete</button>
               </li>
             ))}
           </ul>
         </div>
-        <div className='form'>
+        <div className="container">
           <h1>Добавить чай</h1>
-          <form action="/personalArea" method='POST' className='add'>
-            <label htmlFor="name">Название</label>
-            <input type="text" name="name" />
-            <br />
-            <label htmlFor="title">Описание</label>
-            <input type="text" name="title" />
-            <br />
-            <label htmlFor="img">Изображение</label>
-            <input type="text" name='picture' />
-            <br />
-            <button type="sumbit">Добавить</button>
+          <form method="POST" action="/personalArea" className="add">
+            <div className="mb-3 loginTable">
+              <input type="text" placeholder="Название" />
+              <input type="test" placeholder="Описание" />
+              <input type="text" name='picture' placeholder="Изображение"/>
+              <button type="submit">Отправить</button>
+            </div>
           </form>
+          <div className="err-log" />
         </div>
       </main>
     </Layout>
@@ -40,3 +38,5 @@ function adminPage({ title, user, teas }) {
 }
 
 module.exports = adminPage
+
+
