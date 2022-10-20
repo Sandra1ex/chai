@@ -8,8 +8,9 @@ function adminPage({ title, user, teas }) {
     <Layout title={title}>
       <Header user={user} />
       <script defer src="/js/addTea.js" />
+      <script defer src="/js/deleteTea.js" />
       <main role="main">
-        <div className='container'>
+        <div className='container js-teas-container'>
           <ul className="list-group" id='teas'>
             {teas.map((tea) => (
               <AdminCard key={tea.id} tea={tea}/>

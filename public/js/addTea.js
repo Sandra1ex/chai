@@ -20,6 +20,6 @@ buttonAddTea.addEventListener('submit', async (event) => {
     console.log(teaHtml)
     const teasContainer = document.querySelector('#teas');
     const prevTeassHtml = teasContainer.innerHTML;
-    teasContainer.innerHTML = teaHtml + prevTeassHtml;
+    teasContainer.innerHTML = prevTeassHtml + teaHtml;
     buttonAddTea.reset()
 })
