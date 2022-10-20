@@ -10,14 +10,6 @@ function Main({ title, user, teas }) {
       <Header user={user} />
       <div id="map" className="m-10 map" />
 
-      <div className="d-flex justify-content-around m-4 js-tea-container">
-        {
-          teas.map((tea) => (
-            <TeaCard key={tea.id} tea={tea} />
-          ))
-        }
-      </div>
-
     </Layout>
   );
 }
