@@ -8,7 +8,7 @@ function TeaCard({ tea }) {
           {tea.name || 'Noname'}
         </a>
       </h4>
-      <img className="card_picture" src={tea.picture} />
+      <img className="card_picture" src={tea.picture} alt={tea.name} />
       <p>
         About:
         {' '}

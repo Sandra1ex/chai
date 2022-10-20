@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const React = require('react');
 const Layout = require('./Layout');
 const Header = require('./Header');
@@ -14,6 +15,8 @@ function Main({ title, user, teas }) {
           ))
         }
       </div>
+
+      <div id="map" className="map" />
     </Layout>
   );
 }

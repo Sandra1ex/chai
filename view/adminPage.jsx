@@ -21,4 +21,4 @@ function adminPage({ title, user, teas }) {
   );
 }
 
-module.exports = adminPage
+module.exports = adminPage;
