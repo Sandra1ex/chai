@@ -7,7 +7,7 @@ function Main({ title, user, teas }) {
   return (
     <Layout title={title}>
       <Header user={user} />
-      <div className="container js-tea-container">
+      <div id="listChai" className="container js-tea-container">
         {
           teas.map((tea) => (
             <TeaCard key={tea.id} tea={tea} />
