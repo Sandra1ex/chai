@@ -8,7 +8,9 @@ function Main({ title, user, teas }) {
   return (
     <Layout title={title}>
       <Header user={user} />
-      <div className="container js-tea-container">
+      <div id="map" className="m-10 map" />
+
+      <div className="d-flex justify-content-around m-4 js-tea-container">
         {
           teas.map((tea) => (
             <TeaCard key={tea.id} tea={tea} />
@@ -16,7 +18,6 @@ function Main({ title, user, teas }) {
         }
       </div>
 
-      <div id="map" className="map" />
     </Layout>
   );
 }

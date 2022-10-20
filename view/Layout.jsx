@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const React = require('react');
 
 module.exports = function Layout({ children, title }) {
