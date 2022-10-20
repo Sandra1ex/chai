@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 
@@ -16,7 +17,15 @@ async function createMark() {
     });
     data.teas.forEach((el) => {
       const placemark = new ymaps.Placemark([Number(el.coordinateX), Number(el.coordinateY)], {
-        balloonContentHeader: el.name,
+        balloonContent: `
+			    <div class="balloon">
+				      <div class="balloon__contacts cardLink">
+					      <a href=/tea/${el.id}>${el.name}</a>
+                <br />
+                <img class="card_picture" src=${el.picture} alt=${el.name} >
+				      </div>
+			    </div>
+		`,
       }, {
         iconLayout: 'default#image',
         iconImageHref: '/img/tea.png',
