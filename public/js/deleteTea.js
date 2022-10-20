@@ -1,8 +1,6 @@
 const teasContainer = document.querySelector('.js-teas-container');
 if (teasContainer) {
-
   teasContainer.addEventListener('click', async (event) => {
-
     const isDeleteBtn = event.target.classList.contains('js-delete');
 
     if (!isDeleteBtn) {
