@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const React = require('react');
 
 module.exports = function Layout({ children, title }) {
@@ -9,6 +10,8 @@ module.exports = function Layout({ children, title }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/main.css" />
+        <script defer src="https://api-maps.yandex.ru/2.1/?apikey=6afba4e3-37f7-4865-be73-89f8b5426c22&lang=ru_RU" />
+        <script defer src="/js/map.js" />
         <script src="/js/chaipage.js" defer />
         <title>{title}</title>
       </head>
