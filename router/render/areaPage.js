@@ -24,7 +24,6 @@ areaRouter.get('/', async (req, res) => {
                 limit: 3,
                 raw: true,
             });
-            console.log(comments)
             res.renderComponent(userPage,{comments})
         } catch ({ message }) {
             res.send(message);

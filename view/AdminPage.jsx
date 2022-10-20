@@ -8,13 +8,13 @@ function adminPage({ title, user, teas }) {
       <Header user={user} />
       <script defer src="/js/addTea.js" />
       <main role="main">
-        <div className='comments'>
-          <ul className="teas">
+        <div className='container'>
+          <ul className="list-group">
             {teas.map((tea) => (
-              <li className="tea" key={tea.id}>
+              <li className="list-group-item" key={tea.id}>
                 <span className=" tea-name">{tea.name}</span>
                 {' '}
-                <a>delete</a>
+                <a href={`/tea/del/${tea.id}`}>delete</a>
               </li>
             ))}
           </ul>
