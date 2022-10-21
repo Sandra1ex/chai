@@ -32,13 +32,22 @@ teaRouter.get('/', async (req, res) => {
 
 teaRouter.delete('/:id', async (req, res) => {
   const { user } = res.locals;
-  if (user.role === 'admin') {
-    try {
-      await db.Tea.destroy({ where: { id: req.params.id } });
-      res.sendStatus(200);
-    } catch (error) {
-      res.sendStatus(500);
-    }
+
+  if (!user) {
+    res.sendStatus(401);
+    return;
+  }
+
+  if (user.role !== 'admin') {
+    res.sendStatus(403);
+    return;
+  }
+
+  try {
+    await db.Tea.destroy({ where: { id: req.params.id } });
+    res.sendStatus(200);
+  } catch (error) {
+    res.sendStatus(500);
   }
 });
 
