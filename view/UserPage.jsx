@@ -8,12 +8,12 @@ function userPage({ title, user, comments }) {
       <Header user={user} />
       <main role="main">
         <div className="containerInputUser">
-          <h3 className="tea__title">
+          {/* <h3 className="tea__title">
             Добро пожаловать,
             {' '}
             {`${comments[0]['User.login']}`}
             !
-          </h3>
+          </h3> */}
           <h6 className="tea__title">Ваши последние комментарии</h6>
 
           <ul className="list-group">
