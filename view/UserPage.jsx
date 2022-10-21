@@ -7,8 +7,17 @@ function userPage({ title, user, comments }) {
     <Layout title={title}>
       <Header user={user} />
       <main role="main">
-        <div className="container">
+        <div className="containerInputUser">
+          <h3 className="tea__title">
+            Добро пожаловать,
+            {' '}
+            {`${comments[0]['User.login']}`}
+            !
+          </h3>
+          <h6 className="tea__title">Ваши последние комментарии</h6>
+
           <ul className="list-group">
+
             {
               comments.map((comment) => (
                 <li className="list-group-item" key={comment.id}>
