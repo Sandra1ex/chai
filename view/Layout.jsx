@@ -12,6 +12,7 @@ module.exports = function Layout({ children, title }) {
         <link rel="stylesheet" href="/css/main.css" />
         <script defer src="https://api-maps.yandex.ru/2.1/?apikey=6afba4e3-37f7-4865-be73-89f8b5426c22&lang=ru_RU" />
         <script defer src="/js/map.js" />
+        <script defer src="/js/addCom.js" />
         <title>{title}</title>
       </head>
       <body>

@@ -26,9 +26,7 @@ async function createMark() {
             </h4>
             <img class="card_picture markPic" src=${el.picture} alt=${el.name} />
             <p class="wrapGaming">${el.title} </p>
-          </article>
-
-			   
+          </article>   
 		`,
       }, {
         iconLayout: 'default#image',
