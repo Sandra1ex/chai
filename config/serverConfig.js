@@ -1,27 +1,18 @@
+/* eslint-disable import/no-absolute-path */
 const express = require('express');
-// const cookieParser = require('cookie-parser');
-// const session = require('express-session');
-const ssr = require('../middleware/ssr');
-// const sessionConfig = require('./sessionConfig');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const getUser = require('../middleware/getUser');
+const reactSSR = require('../middleware/reactSSR');
 
-const serverConfig = (app) => {
-  // кофигурирует папку со статическими файлами
-  app.use(express.static('public'));
+const sessionConfig = require('./sessionConfig');
 
-  // конфигурирует парсинг тела с формате x-www-form-urlencoded
+module.exports = function configApp(app) {
+  app.use(session(sessionConfig));
   app.use(express.urlencoded({ extended: true }));
-
-  // конфигурирует парсинг JSON с формата (принятие)
   app.use(express.json());
-
-  // конфигурирует парсинг кук с клиента
-  // app.use(cookieParser());
-
-  // конфигурирует добавление метода renderComponent в ответ
-  app.use(ssr);
-
-  // конфигурирует работу с сессией, расширяет объект req.session
-  // app.use(session(sessionConfig));
+  app.use(cookieParser());
+  app.use(express.static('public'));
+  app.use(reactSSR);
+  app.use(getUser);
 };
-
-module.exports = serverConfig;
