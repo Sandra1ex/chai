@@ -7,6 +7,7 @@ function Main({ title, user }) {
   return (
     <Layout title={title}>
       <Header user={user} />
+
       <div id="map" className="m-10 map" />
 
     </Layout>
