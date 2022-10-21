@@ -8,12 +8,12 @@ function ChaiPage({ tea, user, comments }) {
   return (
     <Layout>
       <Header user={user} />
-      <div className="m-3">
-        <img src={`${tea.picture}`} alt={`${tea.name}`} />
-        <p>{`${tea.name}`}</p>
+      <div id="teaBlock">
+        <img className="rounded mx-auto d-block" src={`${tea.picture}`} alt={`${tea.name}`} />
+        <p className="text-center">{`${tea.name}`}</p>
         <p>{`${tea.title}`}</p>
         <div className="commentsFromDb">
-          <h2>Comments from Users</h2>
+          <h2>Комментарии</h2>
           {
             comments.map((com) => (
               <CommentCard key={com.id} com={com} />
@@ -24,9 +24,9 @@ function ChaiPage({ tea, user, comments }) {
 
         {(user ? (
           <form method="POST" action={`/tea/${tea.id}`} className="m-3 addCom">
-            <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">Комментарий:</label>
             <textarea className="form-control" name="text" id="exampleFormControlTextarea1" rows="3" />
-            <button type="submit">Отправить</button>
+            <button className="btn btn-primary mt-3" type="submit">Отправить комментарий</button>
           </form>
         ) : (<div />))}
 

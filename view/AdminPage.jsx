@@ -9,13 +9,13 @@ function adminPage({ title, user, teas }) {
       <Header user={user} />
       <script defer src="/js/addTea.js" />
       <script defer src="/js/deleteTea.js" />
-      <main role="main">
+      <main className="teaBlock" role="main">
         <div className="container js-teas-container">
-          <ul className="list-group" id="teas">
+          <div className="d-flex justify-content-center flex-wrap m-3" id="teas">
             {teas.map((tea) => (
               <AdminCard key={tea.id} tea={tea} />
             ))}
-          </ul>
+          </div>
         </div>
         <div className="container">
           <h1>Добавить чай</h1>
@@ -26,7 +26,7 @@ function adminPage({ title, user, teas }) {
               <input type="text" name="picture" placeholder="Изображение" />
               <input type="text" name="coordinateX" placeholder="Координата Х" />
               <input type="text" name="coordinateY" placeholder="Координата Y" />
-              <button type="submit">Отправить</button>
+              <button type="submit" className="btn btn-primary mt-3">Отправить</button>
             </div>
           </form>
           <div className="err-log" />
