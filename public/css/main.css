@@ -1,9 +1,18 @@
+body {
+    background-image: url(https://oir.mobi/uploads/posts/2020-01/1578232188_2-3.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
 .header {
     display: flex;
     justify-content: center;
+    background-color: #fdfef900;
 }
 
 .logo {
+    width: 50px;
     margin-right: 20px;
 }
 .headerlink {
@@ -67,10 +76,10 @@ img {
 }
 
 #map {
-    margin: 50px;
-    width: 80%;
+
     height: 600px;
-    background-color: black;
+    padding: 0 120px;
+    margin-top: 125px;
 }
 
 .wrapGaming {
@@ -82,4 +91,42 @@ img {
 .js-tea {
     width: 250px;
     padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    background-color:  rgba(255, 255, 255, 0.7); 
+}
+
+.mapCenter {
+    margin: 5%;
+}
+
+#teaBlock {
+    background-color:  rgba(255, 255, 255, 0.7);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 1500px;
+    margin-top: 50px;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border:solid ;
+    border-radius:10px;
+    margin: 5px;
+    padding: 10px;
+    background-color:white;
+}
+
+.comUser {
+    display: flex;
+    text-align:right;
+    margin-left: 95%;
+}
+
+.pictureCard {
+    width: 200px;
 }
