@@ -8,12 +8,12 @@ async function createMark() {
 
   ymaps.ready(init);
 
-  const center = [48.8866527839977, 2.34310679732974];
+  const center = [-2.3037149169538327, 49.5267612326811];
 
   function init() {
     const map = new ymaps.Map('map', {
       center,
-      zoom: 2,
+      zoom: 3,
     });
     data.teas.forEach((el) => {
       const placemark = new ymaps.Placemark([Number(el.coordinateX), Number(el.coordinateY)], {

@@ -17,8 +17,8 @@ function adminPage({ title, user, teas }) {
             ))}
           </div>
         </div>
-        <div className="container">
-          <h1>Добавить чай</h1>
+        <div className="containerInput">
+          <h1 className="tea__title">Добавить чай</h1>
           <form method="POST" action="/personalArea" className="add">
             <div className="mb-3 loginTable">
               <input type="text" name="name" placeholder="Название" />
@@ -26,7 +26,7 @@ function adminPage({ title, user, teas }) {
               <input type="text" name="picture" placeholder="Изображение" />
               <input type="text" name="coordinateX" placeholder="Координата Х" />
               <input type="text" name="coordinateY" placeholder="Координата Y" />
-              <button type="submit" className="btn btn-primary mt-3">Отправить</button>
+              <button type="submit" className="btn btn-primary mt-3 send">Отправить</button>
             </div>
           </form>
           <div className="err-log" />

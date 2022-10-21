@@ -17,13 +17,14 @@ areaRouter.get('/', async (req, res) => {
   } else {
     try {
       const comments = await db.Comment.findAll({
-        include: db.Comment.Tea,
+        include: [db.Comment.Tea, db.Comment.User],
         where: { userId: user.id },
         order: [['createdAt', 'DESC']],
         ofset: 0,
         limit: 3,
         raw: true,
       });
+      console.log(comments);
       res.renderComponent(userPage, { comments });
     } catch ({ message }) {
       res.send(message);
