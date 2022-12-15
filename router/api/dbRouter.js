@@ -8,7 +8,7 @@ dbRouter.get('/', async (req, res) => {
       raw: true,
     });
     res.json({ teas });
-    // console.log(teas);
+    console.log(teas);
   } catch ({ message }) {
     res.send({ message });
   }
