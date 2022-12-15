@@ -20,6 +20,7 @@ teaRouter.get('/:id', async (req, res) => {
 teaRouter.get('/', async (req, res) => {
   try {
     const { user } = res.locals;
+    console.log(user, 'res.locals.user');
     const teas = await db.Tea.findAll({
       attributes: ['name', 'id', 'picture', 'title'],
       raw: true,
