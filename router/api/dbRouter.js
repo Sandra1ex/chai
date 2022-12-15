@@ -9,6 +9,7 @@ dbRouter.get('/', async (req, res) => {
     });
     res.json({ teas });
     // console.log(teas);
+    // console.log(teas);
   } catch ({ message }) {
     res.send({ message });
   }
